@@ -21,7 +21,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: antiquewhite;
 
   .stream-view {
     width: 60%;
@@ -264,6 +263,9 @@ body {
         flex-direction: column;
 
         .player-config-row {
+          &.focused{
+            background-color: #efff00;
+          }
           border: #343434 solid 1px;
           display: flex;
           flex-direction: column;

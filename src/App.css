@@ -17,7 +17,6 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: antiquewhite;
 }
 .tournament .stream-view {
   width: 60%;
@@ -226,6 +225,9 @@ body {
   flex-wrap: wrap;
   gap: 8px;
   justify-content: start;
+}
+.tournament .config-view .config-container .players-config .player-config-row.focused {
+  background-color: #efff00;
 }
 .tournament .config-view .config-container .players-config .player-config-row .username {
   padding-left: 4px;

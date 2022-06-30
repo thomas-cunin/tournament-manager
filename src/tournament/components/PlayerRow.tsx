@@ -1,15 +1,16 @@
-function PlayerRow() {
+// @ts-ignore
+function PlayerRow({player, index, fct}) {
     return (
-        <div className="player-row">
-            <div className="rank-number"><span>#1</span></div>
+        <div onClick={()=>{fct.setFocusedPlayer(index)}} className={"player-row "}>
+            <div className="rank-number"><span>#{index+1}</span></div>
             <div className="icon"></div>
-            <div className="username"><span>PLAYER001</span></div>
+            <div className="username"><span>{player.username}</span></div>
             <div></div>
             <div></div>
             <div></div>
-            <div className="number"><span>5 W</span></div>
-            <div className="number"><span>0 L</span></div>
-            <div className="number"><span>10 pts</span></div>
+            <div className="number"><span>{player.wins} W</span></div>
+            <div className="number"><span>{player.looses} L</span></div>
+            <div className="number"><span>{fct.getPoints(player)} pts</span></div>
         </div>
     )
 }
