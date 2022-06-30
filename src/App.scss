@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+
+}
+
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.tournament {
+  margin: auto;
+  width: 90vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: antiquewhite;
+
+  .stream-view {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    .champions-panel {
+      background: #213940;
+      height: 24%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .panel-name {
+        padding-left: 20px;
+        padding-top: 5px ;
+        span {
+          font-family: 'Inter';
+          font-style: normal;
+          font-weight: 800;
+          font-size: 20px;
+          line-height: 24px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          letter-spacing: 0.05em;
+          color: #CEAE71;
+        }
+      }
+
+      .champions-display {
+        display: flex;
+        flex-direction: row;
+        height: 80%;
+        width: 100%;
+        gap: 50px;
+
+        .champions-number {
+          padding-left: 40px;
+          align-self: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          span.number {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 30px;
+            line-height: 36px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.05em;
+
+            color: #D0D0D0;
+          }
+
+          span.text {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.05em;
+
+            color: #D0D0D0;
+          }
+        }
+
+        .champions-list {
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          gap: 8px;
+
+          .champion {
+            border: #CEAE71 solid 1px;
+            width: 32px;
+            height: 32px;
+
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+      }
+    }
+
+    .players-ranking {
+      height: 75%;
+      display: flex;
+      justify-content: start;
+      flex-direction: column;
+      gap: 8px;
+      align-items: center;
+
+      .player-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        height: 34px;
+        width: 90%;
+        background: #343434;
+        border: 1px solid #E8AF46;
+
+        .rank-number {
+          span{
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 29px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.05em;
+
+            color: #CEAE71;
+          }
+          span.big {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 36px;
+            line-height: 44px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.05em;
+
+            color: #CEAE71;
+
+          }
+        }
+
+        .icon{
+          width: 22px;
+          height: 20px;
+        }
+        .icon.big {
+          width: 43px;
+          height: 43px;
+        }
+
+        .username {
+          span{
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 17px;
+            line-height: 21px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.1em;
+
+            color: #E1E1E1;
+          }
+          span.big {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 24px;
+            line-height: 29px;
+            display: flex;
+            align-items: center;
+            letter-spacing: 0.1em;
+
+            color: #E1E1E1;
+          }
+        }
+
+        .number {
+          span{
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 13px;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.05em;
+
+            color: #CEAE71;
+          }
+          span.big {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 20px;
+            line-height: 24px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            letter-spacing: 0.05em;
+
+            color: #CEAE71;
+
+          }
+        }
+
+      }
+    }
+  }
+}
