@@ -1,4 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
 body {
   padding: 0;
   margin: 0;
@@ -192,6 +197,46 @@ body {
   text-align: center;
   letter-spacing: 0.05em;
   color: #CEAE71;
+}
+.tournament .config-view {
+  width: 30%;
+}
+.tournament .config-view .config-container {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  background-color: aliceblue;
+}
+.tournament .config-view .config-container .classic-config {
+  display: flex;
+  flex-direction: column;
+}
+.tournament .config-view .config-container .champions-config {
+  display: flex;
+  flex-direction: column;
+}
+.tournament .config-view .config-container .players-config {
+  display: flex;
+  flex-direction: column;
+}
+.tournament .config-view .config-container .players-config .player-config-row {
+  border: #343434 solid 1px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: start;
+}
+.tournament .config-view .config-container .players-config .player-config-row .username {
+  padding-left: 4px;
+  justify-self: end;
+}
+.tournament .config-view .config-container .players-config .player-config-row span {
+  font-weight: bold;
+  justify-self: end;
+}
+.tournament .config-view .config-container .players-config .player-config-row .row {
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=App.css.map */

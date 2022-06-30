@@ -3,7 +3,10 @@
 * {
 
 }
-
+.row{
+display: flex;
+  flex-direction: row;
+}
 
 body {
   padding: 0;
@@ -36,7 +39,8 @@ body {
 
       .panel-name {
         padding-left: 20px;
-        padding-top: 5px ;
+        padding-top: 5px;
+
         span {
           font-family: 'Inter';
           font-style: normal;
@@ -133,7 +137,7 @@ body {
         border: 1px solid #E8AF46;
 
         .rank-number {
-          span{
+          span {
             font-family: 'Inter';
             font-style: normal;
             font-weight: 800;
@@ -146,6 +150,7 @@ body {
 
             color: #CEAE71;
           }
+
           span.big {
             font-family: 'Inter';
             font-style: normal;
@@ -162,17 +167,18 @@ body {
           }
         }
 
-        .icon{
+        .icon {
           width: 22px;
           height: 20px;
         }
+
         .icon.big {
           width: 43px;
           height: 43px;
         }
 
         .username {
-          span{
+          span {
             font-family: 'Inter';
             font-style: normal;
             font-weight: 800;
@@ -184,6 +190,7 @@ body {
 
             color: #E1E1E1;
           }
+
           span.big {
             font-family: 'Inter';
             font-style: normal;
@@ -199,7 +206,7 @@ body {
         }
 
         .number {
-          span{
+          span {
             font-family: 'Inter';
             font-style: normal;
             font-weight: 800;
@@ -212,6 +219,7 @@ body {
 
             color: #CEAE71;
           }
+
           span.big {
             font-family: 'Inter';
             font-style: normal;
@@ -228,6 +236,54 @@ body {
           }
         }
 
+      }
+    }
+  }
+
+  .config-view {
+    width: 30%;
+
+    .config-container {
+      width: 100%;
+      height: 100%;
+      overflow: scroll;
+      background-color: aliceblue;
+
+      .classic-config {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .champions-config {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .players-config {
+        display: flex;
+        flex-direction: column;
+
+        .player-config-row {
+          border: #343434 solid 1px;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          gap: 8px;
+          justify-content: start;
+
+         .username {
+            padding-left: 4px;
+            justify-self: end;
+          }
+
+          span {
+            font-weight: bold;
+            justify-self: end;
+          }
+.row{
+  justify-content: space-between;
+}
+        }
       }
     }
   }
