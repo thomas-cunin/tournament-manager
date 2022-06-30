@@ -49,8 +49,8 @@ function Tournament() {
     };
 
 // Initialize Firebase
-    const firApp = initializeApp(firebaseConfig);
-    const database = getDatabase();
+    const fireApp = initializeApp(firebaseConfig);
+    const database = getDatabase(fireApp,'https://lol-tournament-manager-default-rtdb.europe-west1.firebasedatabase.app/');
     const getPlayersInDB = (index: string) => {
         const dataRef = ref(database, 'data/' + index);
         onValue(dataRef, (snapshot) => {
@@ -167,7 +167,7 @@ function Tournament() {
             // @ts-ignore
              getPoints : (playerObject) => {
                 let calc = playerObject.wins * configuration.wp;
-                calc+= playerObject.lp * configuration.lp;
+                calc+= playerObject.looses * configuration.lp;
                 return calc;
             },
         setFocusedPlayer:(i:number)=>{
@@ -196,6 +196,10 @@ function Tournament() {
             logoId:1
         };
         setPlayers(players.concat(newPlayer));
+    }
+    const reloadRanking = ()=>{
+        let sorted = [...players].sort((a, b) => (fct.getPoints(a) < fct.getPoints(b)) ? 1 : -1);
+        setPlayers(sorted);
     }
     return (
         <div className="tournament">
@@ -278,6 +282,8 @@ function Tournament() {
                     </div>
                     <div className="players-config">
                         <h2>Joueurs</h2>
+                        <button onClick={reloadRanking}>Actualiser le classement</button>
+                        <hr/>
                         <button onClick={()=>{addPlayer('Player00#')}}>Ajouter joueur</button>
                         <hr/>
                         {players.map((player:object,index:number)=>{
