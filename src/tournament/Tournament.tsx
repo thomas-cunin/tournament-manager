@@ -80,8 +80,19 @@ function Tournament() {
 
     })
     const [usedChampions, setUsedChampions] = useState([
-        {id:'Aatrox'}
+        {id:'Aatrox', value:'Aatrox'}
     ])
+    const removeChampion =  function removeChampion(id:string){
+        let data = usedChampions.filter((champion, index)=>{return champion.id !== id})
+        setUsedChampions(data);
+    };
+    const addChampion = function addChampion(id:string) {
+        const newChampion = {
+            id:id,
+            value:id
+        };
+        setUsedChampions(usedChampions.concat(newChampion));
+    }
     const [configuration, setCOnfiguration] = useState({
         wp:2,
         lp:0,
@@ -204,7 +215,7 @@ function Tournament() {
     return (
         <div className="tournament">
             <div className="stream-view">
-                <ChampionsDisplayPanel/>
+                <ChampionsDisplayPanel champions={usedChampions} removeChampion={removeChampion}/>
                 <div className="players-ranking">
                     {players.map((player:object,index:number)=>{
                         return <PlayerRow player={player} fct={fct} index={index} key={index} ></PlayerRow>
