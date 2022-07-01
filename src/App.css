@@ -214,6 +214,32 @@ body {
   display: flex;
   flex-direction: column;
 }
+.tournament .config-view .config-container .champions-config button {
+  width: 100%;
+}
+.tournament .config-view .config-container .champions-config .bg-white {
+  padding-top: 8px;
+  padding-left: 8px;
+  background-color: white;
+  border: #213940 solid 1px;
+}
+.tournament .config-view .config-container .champions-config .bg-white input {
+  margin-left: 8px;
+}
+.tournament .config-view .config-container .champions-config .bg-white ul {
+  list-style: none;
+  padding-left: 2px;
+}
+.tournament .config-view .config-container .champions-config .bg-white ul li {
+  cursor: pointer;
+  margin-top: 3px;
+}
+.tournament .config-view .config-container .champions-config .bg-white ul li:nth-child(even) {
+  background-color: aliceblue;
+}
+.tournament .config-view .config-container .champions-config .bg-white ul li:nth-child(odd) {
+  background-color: beige;
+}
 .tournament .config-view .config-container .players-config {
   display: flex;
   flex-direction: column;

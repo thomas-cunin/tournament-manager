@@ -10,6 +10,7 @@ import ChampionsDisplayPanel from './components/ChampionsDisplayPanel';
 
 import PlayerRow from './components/PlayerRow';
 import axios from "axios";
+import DatalistInput, {useComboboxControls} from "react-datalist-input";
 
 // @ts-ignore
 function PlayerConfigRow({index, player, fct, isFocus}) {
@@ -37,7 +38,7 @@ function PlayerConfigRow({index, player, fct, isFocus}) {
 }
 
 function Tournament() {
-
+    const { setValue, value } = useComboboxControls({ isExpanded:false,initialValue: '' });
     // Your web app's Firebase configuration
     const firebaseConfig = {
         apiKey: "AIzaSyDBdW7TM8Mxl9iEiAARBg_BLutUSvGCKRU",
@@ -287,7 +288,20 @@ function Tournament() {
                     <div className="champions-config">
                         <h2>Champions</h2>
                         <div className="config-row">
-                            Ajouter un champion <input type="text"/>
+                            <button onClick={updateChampionsLibrary}>Charger la liste des champions</button>
+                        </div>
+                        <div className="config-row bg-white">
+                            <DatalistInput
+                            value={value}
+                            setValue={setValue}
+                            placeholder="Urgot"
+                            label="Ajouter un champion"
+                            onSelect={(item) => {
+                                addChampion(item.value);
+                                setValue('');
+                            }}
+                            items={championsLibrary}
+                        />
                         </div>
 
                     </div>
