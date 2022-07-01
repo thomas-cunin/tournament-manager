@@ -119,6 +119,10 @@ body {
   background: #343434;
   border: 1px solid #E8AF46;
 }
+.tournament .stream-view .players-ranking .player-row .rank-number {
+  padding-left: 10px;
+  min-width: 60px;
+}
 .tournament .stream-view .players-ranking .player-row .rank-number span {
   font-family: "Inter";
   font-style: normal;
@@ -151,6 +155,9 @@ body {
   width: 43px;
   height: 43px;
 }
+.tournament .stream-view .players-ranking .player-row .username {
+  min-width: 150px;
+}
 .tournament .stream-view .players-ranking .player-row .username span {
   font-family: "Inter";
   font-style: normal;
@@ -172,6 +179,9 @@ body {
   align-items: center;
   letter-spacing: 0.1em;
   color: #E1E1E1;
+}
+.tournament .stream-view .players-ranking .player-row .number {
+  min-width: 50px;
 }
 .tournament .stream-view .players-ranking .player-row .number span {
   font-family: "Inter";

@@ -136,6 +136,8 @@ body {
         border: 1px solid #E8AF46;
 
         .rank-number {
+          padding-left: 10px;
+          min-width: 60px;
           span {
             font-family: 'Inter';
             font-style: normal;
@@ -167,6 +169,7 @@ body {
         }
 
         .icon {
+
           width: 22px;
           height: 20px;
         }
@@ -177,6 +180,7 @@ body {
         }
 
         .username {
+          min-width: 150px;
           span {
             font-family: 'Inter';
             font-style: normal;
@@ -205,6 +209,7 @@ body {
         }
 
         .number {
+          min-width: 50px;
           span {
             font-family: 'Inter';
             font-style: normal;

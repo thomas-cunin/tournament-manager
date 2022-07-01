@@ -7,7 +7,6 @@ function ChampionsDisplayPanel({champions, removeChampion}) {
             <div className="panel-name">
                 <span>Champions joués:</span>
             </div>
-            <hr/>
             <div className="champions-display">
                 <div className="champions-number">
                     <span className="number">{champions.length}</span>

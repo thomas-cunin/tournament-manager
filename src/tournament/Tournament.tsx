@@ -24,7 +24,7 @@ function PlayerConfigRow({index, player, fct, isFocus}) {
                 <button onClick={()=>{fct.removeLoose(index)}}>-Los</button>
                 <span>{player.wins} win</span>
                 <span>{player.looses} los</span>
-                <span>5 pts</span>
+                <span>{fct.getPoints(player)} pts</span>
             </div>
             <div className="row">
                 <div className='username'>
